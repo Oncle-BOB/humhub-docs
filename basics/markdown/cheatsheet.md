@@ -79,9 +79,9 @@ http://github.com - automatic!
 [GitHub](http://github.com)
 ```
 
-### Images with Markdown
+### Images
 
-#### Images
+#### Non-Linked Images
 ```
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
@@ -109,4 +109,3 @@ Content in the first column | Content in the second column
 ```
 Let's rename \*our-new-project\* to \*our-old-project\*.
 ```
-
