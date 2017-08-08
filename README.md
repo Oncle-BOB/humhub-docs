@@ -8,6 +8,7 @@ folder /protected/humhub/docs.
 
 Documentations
 --------------
+- [Basics](basics/README.md) (Note: This directory stores basic knowledge on HumHub Features)
 - [Installation and Administration](admin/README.md)
 - [Theming](theme/README.md)
 - [Core and Module Development](developer/README.md)
