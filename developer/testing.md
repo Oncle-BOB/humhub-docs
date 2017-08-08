@@ -1,6 +1,17 @@
 Testing (since v1.2)
 ====================
 
+## Testing basics
+Testing in Humhub/Yii extends the paradigm of unit testing. I.e. testing models and controllers is complemented by functional and acceptance tests. Acceptance tests cover scenarios from a user's perspective: Opening the browser, accessing the site, click links and buttons etc. This behaviour can be simulated. Therefore a webserver as well as an automated browser instance are necessary (see below).
+
+Functional tests are similar to acceptance tests but run without a running webserver. 
+
+Codeception allows integrated testing with acceptance, functional and unit tests.
+
+*ATTENTION: Some of the test libraries are developed for use with PHP 7 only*
+
+Details: [Codeception](http://codeception.com/docs/01-Introduction)
+
 ## Test Environment Setup
 
 -  Install codeception ([http://codeception.com/install](http://codeception.com/install))
@@ -44,10 +55,6 @@ Configure the database connection for your test environment in `@humhub/tests/co
 >Note: You'll have to run the migrations for your test environment manually in order to keep your test environment up to date.
 
 - Install test environment:
-
-```cd protected/humhub/tests/codeception/bin```
-
-```php yii migrate/up --includeModuleMigrations=1 --interactive=0```
 
 ```php yii installer/auto```
 
@@ -152,6 +159,8 @@ codecept run codeception/acceptance/TestCest:testFunction
 ```
 
 ### Run acceptance tests
+Phantom.js and Selenium are needed as servers to run acceptance tests on your system. If your already installed webserver is listening on port 8080 you do not need to start the test server. You can simply run codeception but selenium or phantomjs must be running.
+
 #### with phantomjs
 
 - Run phantomjs server (is installed with composer update)
