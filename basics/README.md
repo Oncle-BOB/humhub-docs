@@ -7,4 +7,4 @@ Core Features
 
 Module Features
 ---------------
-`TBA`
+* [Custom Pages](module/cp-cheatsheet.md)
