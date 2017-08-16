@@ -70,7 +70,7 @@ TBD
 - Renamed space header settings menu dropdown class
   from  [[humhub\modules\space\modules\manage\widgets\Menu]] to [[humhub\modules\space\widgets\HeaderControlsMenu]]
 
-- Refactored settings system. see [Settings Documentation](modules-settings.md) for more details.
+- Refactored settings system. see [Settings Documentation](settings.md) for more details.
   Old settings api is still available in 1.1.x 
 
 - Refactored user group system

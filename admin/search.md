@@ -18,7 +18,7 @@ cd /path/to/humhub/protected
 php yii search/rebuild
 ```
 
-or by means of [grunt](../developer/core-build.md):
+or by means of [grunt](../developer/build.md):
 
 ```
 grunt build-search
