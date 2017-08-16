@@ -58,8 +58,8 @@ The `config.php` file enables automatic module loading and event configuration, 
 
 - **id** - Unqiue ID of the module (required)
 - **class** - Namespaced classname of the module class (required)
+- **namespace** - The namespace of your module (required)
 - **events** - Array containing the modules event configuration (optional)
-- **namespace** - The namespace of your module 
 - **urlManagerRules** - Array of [URL Manager Rules](http://www.yiiframework.com/doc-2.0/yii-web-urlmanager.html#addRules()-detail) (optional)
 - **modules** - Submodules (optional)
 
