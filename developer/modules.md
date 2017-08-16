@@ -115,17 +115,17 @@ class Module extends \humhub\components\Module
 ```
 >Note: The default implementation of `disable()` will clear some module data automatically as the module global and ContentContainer settings, profile/space module relations.
 
-**Handling the enabling and disabling of this module for a given space or profile**
+#### Handling the enabling and disabling of this module for a given space or profile
 See the [Container Module]() section for more information.
 
-**Export Module Permissions**
+####  Export Module Permissions
 Module specific permissions are exported by means of the [[humhub\components\Module::getPermissions()]] function. See the [Permissions]() section for more information.
 
-**Export Module Notification**
+#### Export Module Notification
 Modules can export Notificaions in order to make them configurable in the notificaiton settings.
 See the [Notifications]() section for more information.
 
-**Module Assets and `$resourcesPath`**
+####  Module Assets and `$resourcesPath`
 The [[humhub\components\Module::resourcesPath]] defines the modules resource directory, containing images, javascript files or other assets.
 
 See the [Module Assets]() section for more information.
