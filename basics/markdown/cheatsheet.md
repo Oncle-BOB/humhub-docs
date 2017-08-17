@@ -25,6 +25,7 @@ __This will also be bold__
 ```
 
 #### Italic
+
 ```
 *This text will be italic*
 _This will also be italic_
@@ -32,6 +33,7 @@ _This will also be italic_
 **This text will be bold**
 __This will also be bold__
 ```
+
 ```
 _You **can** combine both as well_
 ```
@@ -46,14 +48,17 @@ I think you should use an
 #### Syntax highlighting
 
 ```
-``` javascript
+\```\
+javascript
 function fancyAlert(arg) {
   if(arg) {
     $.facebox({div:'#foo'})
   }
-} ```
+}
+\```\
 ```
-> Note: That both "```" must be on it's own line for Syntax highlighting to work!
+
+> Note: That all "`\`" must be removed and all "```" must be on it's own line for Syntax highlighting to work!
 
 ### Lists
 
