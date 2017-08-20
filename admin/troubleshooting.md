@@ -37,7 +37,7 @@ Cron Job Setup
 - Can you provide screenshots of your Cron Job settings? (With personal information blurred out!)
 - What type of server are you using? (CloudLinux CentOS 6, Windows IIS, or etc)
 
-> Note: For more help refer to [here](admin/cron-jobs.md)!
+> Note: For more help refer to [here](cron-jobs.md)!
 
 Direct Support (Enterprise Edition only)
 ----------------------------------------
