@@ -28,6 +28,16 @@ Github - Bugtracker
 - Modules? Confirm that you've tested with Debug > Reload Without Extensions first (see below).
 - Any errors logged in Debug > Show Developer Tools - Console view
 
+Cron Job Setup
+----------------------------------------
+- Do you have access to setup Cron Jobs?
+- Does your server use Cron or Crontab?
+- Does your server use a third-party Cron Job provider?
+- Are you using VPS or Dedicated/Shared/Other Hosting?
+- Can you provide screenshots of your Cron Job settings? (With personal information blurred out!)
+- What type of server are you using? (CloudLinux CentOS 6, Windows IIS, or etc)
+
+> Note: For more help refer to [here](admin/cron-jobs.md)!
 
 Direct Support (Enterprise Edition only)
 ----------------------------------------
