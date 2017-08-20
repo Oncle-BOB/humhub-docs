@@ -1,2 +1,0 @@
-# Custom Pages Cheatsheet
-`TBA`
