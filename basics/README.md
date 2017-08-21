@@ -2,7 +2,9 @@
 
 Core Features
 ---------------
-* [Markdown Cheatsheet](markdown/cheatsheet.md)
+
+* [Markdown Cheatsheet](core/md-cheatsheet.md)
+* [Emoji Cheatsheet](core/emoji-cheatsheet.md)
 
 Module Features
 ---------------
