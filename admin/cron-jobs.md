@@ -1,4 +1,4 @@
-# Cron Job Setup
+Cron Job Setup
 =======
 
 The following are to help you with your Cron Job setup, and they are in no way a 100% guarantee to work for you.
