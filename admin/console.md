@@ -5,7 +5,7 @@ Some administrative tasks can also or exclusively be executed by console. All av
 by executing 
 
 ```
-    php yii
+php yii
 ```
 
 within the `protected` directory of your humhub installation.
