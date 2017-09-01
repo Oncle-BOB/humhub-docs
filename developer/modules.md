@@ -1,4 +1,4 @@
-Module Developement - Getting Started
+Module - Getting Started
 =================
 
 The following guide describes the basic module structure and extended module features as well as important considerations regarding your own custom module.
@@ -7,33 +7,31 @@ The following guide describes the basic module structure and extended module fea
 
 Before even starting the developement of a custom module, you first have to consider the following **module options**:
 
-- [Can my module be enabled on profile and/or space level?](#)
-- Does my module produce [stream entries](modules-stream.md) or other [content](modules-content.md)?
-- Does my module produce [global](modules-content.md#global) content or views (not bound to a profile/space) ?
-- Does my module provide any kind of sidebar [snippet](#)?
-- Do I need to [change the default behaviour](#) of some core components?
-- Do I need specific [permissions]() for my module?
-- Does my module create any [notifications](modules-notification.md) or [activities](modules-activities.md]?
-- Can [guests](#) view some of my module views?
+- [Can my module be enabled on profile and/or space level?](modules.md#container-module)
+- Does my module produce [stream entries](stream.md) or other [content](content.md)?
+- Does my module produce [global](content.md#global-content) content or views (not bound to a profile/space) ?
+- Does my module provide any kind of sidebar [snippet](snippet.md)?
+- Do I need to [change the default behaviour](module-change-behavior.md) of some core components?
+- Do I need specific [permissions](permissions.md) for my module?
+- Does my module create any [notifications](notifications.md) or [activities](activities.md)?
+- Should [guest](permissions.md#guests-access) users have access to some of my module views and functions?
 
 Furthermore you may have to consider the following **issues**:
 
-- [Module settings and configuration]()
-- [Append my module to a specific navigation](modules-ui.md)
+- [Module settings and configuration](settings.md)
+- [Append my module to a specific navigation](module-change-behavior.md)
 - [Client side developement](javascript-index.md)
-- [Asset Management](modules-ui.md#assets) (TBD:getPublishedUrl)
-- [Data Integrity Check](modules-troubleshooting.md#integrity)
-- [Migrations and Uninstallation](modules-first-steps.md)
-- [Testing](modules-testing.md)
-- [File handling](modules-files.md)
-- [Events](core-events.md)
-- [Translation](modules-ui.md#internationalization)
-- [Live UI updates](modules-live.md)
-- [Module version compatibility](#)
-- [Submodules](#)
-- [Security](modules-security.md)
-- [Theming](modules-ui.md#theming)
-- [Documentation and changelog](modules-miscellaneous.md#documentaiton)
+- [Asset Management](assets.md)
+- [Data Integrity](models.md#data-integrity)
+- [Migrations and Uninstallation and Compatibility](migration.md)
+- [Testing](testing.md)
+- [File handling](files.md)
+- [Events](events.md)
+- [Translation](i18n.md)
+- [Live UI updates](live.md)
+- [Submodules](#submodules)
+- [Security](security.md)
+- [Theming](embedded-themes.md)
 
 
 ## Basic Module Structure
@@ -60,8 +58,8 @@ The `config.php` file enables automatic module loading and event configuration, 
 
 - **id** - Unqiue ID of the module (required)
 - **class** - Namespaced classname of the module class (required)
+- **namespace** - The namespace of your module (required)
 - **events** - Array containing the modules event configuration (optional)
-- **namespace** - The namespace of your module 
 - **urlManagerRules** - Array of [URL Manager Rules](http://www.yiiframework.com/doc-2.0/yii-web-urlmanager.html#addRules()-detail) (optional)
 - **modules** - Submodules (optional)
 
@@ -117,17 +115,17 @@ class Module extends \humhub\components\Module
 ```
 >Note: The default implementation of `disable()` will clear some module data automatically as the module global and ContentContainer settings, profile/space module relations.
 
-**Handling the enabling and disabling of this module for a given space or profile**
+#### Handling the enabling and disabling of this module for a given space or profile
 See the [Container Module]() section for more information.
 
-**Export Module Permissions**
+####  Export Module Permissions
 Module specific permissions are exported by means of the [[humhub\components\Module::getPermissions()]] function. See the [Permissions]() section for more information.
 
-**Export Module Notification**
+#### Export Module Notification
 Modules can export Notificaions in order to make them configurable in the notificaiton settings.
 See the [Notifications]() section for more information.
 
-**Module Assets and `$resourcesPath`**
+####  Module Assets and `$resourcesPath`
 The [[humhub\components\Module::resourcesPath]] defines the modules resource directory, containing images, javascript files or other assets.
 
 See the [Module Assets]() section for more information.

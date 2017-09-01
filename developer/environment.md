@@ -1,19 +1,19 @@
 Development Environment
 =======================
 
-
 Quick Notes
 -----------
 
-- Make sure that your using a Git/Composer HumHub Installation
-- Enable development mode, see [Disable Errors Section](../admin/security.md#disable-errors-debugging)
-- Disable Caching under `Administration -> Settings -> Advanced -> Caching -> None`
+- Make sure you are using a [Git/Composer HumHub installation](git-installation.md)
+- Enable the debug mode, see [Disable Errors Section](../admin/security.md#disable-errors-debugging)
+- Disable caching under `Administration -> Settings -> Advanced -> Caching -> None`
 
-
-Modules Directory
+External Modules Directory
 -----------------
 
-You can also locate your custom modules outside of the HumHub project structure.
+Custom modules can also be located outside of the default HumHub modules directory by
+setting the `moduleAutoloadPaths` parameter in your `/protected/config/common.php` configuration. This seperation can
+be useful while working with custom modules.
 
 ```php
 return [
@@ -22,17 +22,16 @@ return [
         'moduleAutoloadPaths' => ['/some/folder/modules'],        
     ],
     //...
+]
 ```
-
-
 
 Yii Debug Module
 ----------------
 
-Add following block to your local web configuration (/protected/config/web.php)
+Add following block to your local web configuration `/protected/config/web.php` in order
+to allow [Yii's debug Module](http://www.yiiframework.com/doc-2.0/ext-debug-index.html).
 
 ```php
-<?php
 return [
     // ...
     'bootstrap' => ['debug'],
@@ -45,13 +44,13 @@ return [
             // ...
 	]
 ];
-?>
 ```
 
 Gii Code Generator
 -------------------
 
- Add following block to your local web configuration (/protected/config/web.php)
+ Add following block to your local web configuration `/protected/config/web.php` in order to
+ enable the [Gii Code Generator Module](http://www.yiiframework.com/doc-2.0/guide-start-gii.html)
 
 ```php
 return [
@@ -68,7 +67,7 @@ return [
 ?>
 ```
 
-Add following block to your local console configuration (/protected/config/console.php)
+Furthermore add the following block to your local console configuration `/protected/config/console.php`
 
 ```php
 return [
@@ -81,3 +80,7 @@ return [
 ];
 ```
 
+Developer Tools Module
+-------------------
+
+The [devtools Module](https://github.com/humhub/humhub-modules-devtools) provides useful showcases of widgets and also a Module generator based on Gii.

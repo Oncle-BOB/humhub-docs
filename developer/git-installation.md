@@ -1,7 +1,7 @@
 Installation (Developers)
 =========================
 
-> Warning: This installation method allows you to easily fetch the latest version from our 
+> Warning: This installation method allows you to fetch the latest branch from the repository which may not stable enough for production use.  
 
 Preparation
 -----------
@@ -20,9 +20,8 @@ FLUSH PRIVILEGES;
 Get HumHub
 ----------
 
-In order to be able to install a branch fetched by git, you'll have to run a composer update to download external dependencies.
-
- - Clone Git Repository:
+ - Install [git](https://git-scm.com/)
+ - Clone git Repository:
 
 ```
 git clone https://github.com/humhub/humhub.git
@@ -38,31 +37,6 @@ php composer.phar update
 
 > Note: The composer update may have to be executed again after an update of your local repository by a git pull. Read more about updating ([Update Guide](admin-updating.html#gitcomposer-based-installations))
 
-
-
-File Settings & Permissions
----------------------------
-
-
-Make the following directories/files writable by the webserver
-- /assets
-- /protected/config/
-- /protected/modules
-- /protected/runtime
-- /uploads/*
-
-Make the following files executable:
- - /protected/yii
- - /protected/yii.bat
-
-**Make sure the following directories are not accessible through the webserver!**
-
-
-Start Web Installer
----------------
-
-Open the installation guide in your browser (e.g. [http://localhost/humhub](http://localhost/humhub))
-
-
+ - Follow further instructions of the [Installation Guide](admin-installation.html)
 
 

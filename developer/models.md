@@ -1,4 +1,4 @@
-Database and Models
+(TBD:getPublishedUrl)Database and Models
 ====================
 
 ## Conventions
@@ -62,7 +62,7 @@ class uninstall extends Migration
 }
 ```
 
-## Integrity Checker
+## Data Integrity
 
 The integrity checker is a command which validates and if necessary repairs the application database.
 

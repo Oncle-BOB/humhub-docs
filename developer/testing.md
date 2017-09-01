@@ -32,7 +32,7 @@ CREATE DATABASE `humhub_test` CHARACTER SET utf8 COLLATE utf8_general_ci;
 Configure the database connection for your test environment in `@humhub/tests/config/common.php`:
 
 
- 
+ ```
     'components' => [
 	    'db' => [
 	    'dsn' => 'mysql:host=localhost;dbname=humhub_test',
@@ -41,32 +41,33 @@ Configure the database connection for your test environment in `@humhub/tests/co
 		    'charset' => 'utf8',
     	], 
     ]
-
+```
 
 - Run Database Migrations:
     
     
-```cd protected/humhub/tests/codeception/bin```
+`cd protected/humhub/tests/codeception/bin`
 
-```php yii migrate/up --includeModuleMigrations=1 --interactive=0```
+`php yii migrate/up --includeModuleMigrations=1 --interactive=0`
 
-```php yii installer/auto```
+`php yii installer/auto`
 
 >Note: You'll have to run the migrations for your test environment manually in order to keep your test environment up to date.
 
 - Install test environment:
 
-```php yii installer/auto```
+`php yii installer/auto`
 
 - Set `HUMHUB_PATH` system variable
 
 The `HUMHUB_PATH` is used by your test environment to determine the humhub root path.
 This is only required for non core module tests and can also be set in your modules test configuration `/tests/config/test.php`:
 
+```
     return [
     	'humhub_root' => '/path/to/my/humhub/root',
     ];
-
+```
 
 ## Test configuration
 
@@ -81,11 +82,11 @@ The following configuration files can be used to overwrite the test configuratio
 
 The configurations for a suite will be merged in the following order:
 
- - @humhub/protected/humhub/tests/config/functional.php
- - @myModule/tests/config/common.php
- - @myModule/tests/config/functional.php
- - @myModule/tests/config/env/myenv/common.php (if exists)
- - @myModule/tests/config/env/myenv/functional.php (if exists) 
+ - `@humhub/protected/humhub/tests/config/functional.php`
+ - `@myModule/tests/config/common.php`
+ - `@myModule/tests/config/functional.php`
+ - `@myModule/tests/config/env/myenv/common.php (if exists)`
+ - `@myModule/tests/config/env/myenv/functional.php (if exists)`
 
 ### Environments
 
@@ -113,17 +114,17 @@ humhub_root settings you want to use for this test run.
 
 ### Run all core tests:
 
-´´´
+```
 cd protected/humhub/tests/
 codecept run
-´´´
+```
 
 ### Run core module test
 
-´´´
+```
 cd myModule/tests
 codecept run unit
-´´´
+```
 
 ### Run non core module tests
 
@@ -154,20 +155,20 @@ return [
 
 ### Run single test
 
-```
-codecept run codeception/acceptance/TestCest:testFunction
-```
+`codecept run codeception/acceptance/TestCest:testFunction`
 
 ### Run acceptance tests
-Phantom.js and Selenium are needed as servers to run acceptance tests on your system. If your already installed webserver is listening on port 8080 you do not need to start the test server. You can simply run codeception but selenium or phantomjs must be running.
+Phantom.js and Selenium are needed as servers to run acceptance tests on your system. You can simply run codeception but selenium or phantomjs must be running.
+
+Hint: If your already installed webserver is listening on port 8080 you do not need to start the test server, because Humhub tests are run on port 8080. However if your `DocumentRoot` directory is not configured to directly open humhub via `localhost` you have to do some adjustments in the `codeception.yml`  file of our `test` folder (`test-entry-url`) and the `acceptance.suite.yml` file. Alternatively start the test server as described below (in humhub root directory).
 
 #### with phantomjs
 
 - Run phantomjs server (is installed with composer update)
 
-```cd protected/vendor/bin```
+`cd protected/vendor/bin`
 
-```phantomjs --webdriver=44444```
+`phantomjs --webdriver=44444`
 
 #### with chrome driver (selenium)
 
@@ -181,11 +182,10 @@ java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone-
 
 Start test server:
 
-```cd /myhumHubInstallation```
+`cd /myhumHubInstallation`
 
-```php -S localhost:8080```
+`php -S localhost:8080`
 
 run with chrome environment:
 
-```codecept run acceptance --env chrome```
-
+`codecept run acceptance --env chrome`
