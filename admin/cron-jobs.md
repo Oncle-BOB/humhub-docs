@@ -42,9 +42,9 @@ Refer to this [post](https://stackoverflow.com/questions/16700749/setting-up-cro
 ![](http://i.imgur.com/TbWEsjC.png)
 
 ### OVH
-[Follow this link](https://www.ovh.com/us/g1990.hosting_automated_taskscron)!
+This [procedure](https://github.com/humhub/humhub/issues/2718#issuecomment-330910142) based on php 5.6 (adapt to your PHP version). For details on the task manager cron ovh [Follow this link](https://www.ovh.com/us/g1990.hosting_automated_taskscron)!
 
-`Example TBA`
+Based on the official [humhub documentation](http://docs.humhub.org/admin-installation-configuration.html) you need to get something similar to this <a href="https://www.hostingpics.net/viewer.php?id=390363cron.jpg"><img src="https://img11.hostingpics.net/thumbs/mini_390363cron.jpg" alt="Heberger image" /></a>
 
 ### Debian
 Please read up on this [article](https://debian-administration.org/article/56/Command_scheduling_with_cron).
